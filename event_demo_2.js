@@ -2,8 +2,12 @@ const EventEmitter = require('events').EventEmitter;
 
 const event = new EventEmitter();
 
-event.on('mike', ()=>{
+function listenme(){
     console.log('i am listening');
-});
+
+    event.removeListener('mike', listenme);
+}
+
+event.on('mike', listenme);
 
 event.emit('mike');
