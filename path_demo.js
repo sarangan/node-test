@@ -24,4 +24,6 @@ console.log(path.parse(__filename)); //obj
 
 console.log(path.relative('/data/orandea/test/aaa', '/data/orandea/impl/bbb'));
 
-console.log(path.resolve('/foo/bar', './baz/file')); //not sure
+console.log(path.resolve('/foo/bar', './baz/file')); //cd to dir in order 
+
+path.normalize('/this//is/../../.../'); //give validated path /this/is
