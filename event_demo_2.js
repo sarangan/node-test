@@ -10,4 +10,5 @@ function listenme(){
 
 event.on('mike', listenme);
 
+
 event.emit('mike');
